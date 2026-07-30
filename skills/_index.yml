@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: generated
+source: https://lunarcrush.ai/llms.txt
+note: >-
+  Skills grounded in real, documented lunarcrush.ai / v4 endpoints and MCP tools.
+  No provider-published Agent Skill / AGENTS.md was found; these are API Evangelist
+  operating instructions built from the documented surface.
+skills:
+- file: lunarcrush-topic-social-snapshot.md
+  name: Get a real-time social snapshot for a topic
+  api: https://lunarcrush.ai
+  operations: [topic, topic_time_series, topic_posts]
+- file: lunarcrush-rank-crypto-by-social.md
+  name: Rank cryptocurrencies by social and market signal
+  api: https://lunarcrush.ai
+  operations: [cryptocurrencies, list, topic]
+- file: lunarcrush-creator-influence.md
+  name: Find and profile the top creators for a topic
+  api: https://lunarcrush.ai
+  operations: [search, creator, creator_posts, creator_time_series]

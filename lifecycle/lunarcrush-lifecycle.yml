@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/lunarcrush/api
+versioning:
+  scheme: uri-path
+  current: v4
+  note: >-
+    The REST API is namespaced under /api4/ (LunarCrush API v4). Individual endpoints
+    carry their own version suffix (/v1, /v2), so newer endpoint revisions ship
+    alongside older ones (e.g. topics/list/v1, coins/list/v2, nfts/time-series/v2).
+  docs: https://lunarcrush.com/developers/api/endpoints
+change_feed:
+  operation: /api4/public/system/changes/v1
+  note: >-
+    A "System Changes" endpoint reports platform/data changes, functioning as a
+    machine-readable change feed for the v4 API.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation policy or RFC 8594 Sunset/Deprecation header support was found.
+sla:
+  url: null
+  uptime_target: null
+status_page:
+  url: null
+  note: >-
+    No dedicated LunarCrush status page was found; the lunarcrush.statuspage.io
+    subdomain resolves only to the generic Atlassian Statuspage placeholder.
+pricing:
+  url: https://lunarcrush.com/pricing
+  note: API access is tiered by subscription plan; enterprise/data-licensing available.

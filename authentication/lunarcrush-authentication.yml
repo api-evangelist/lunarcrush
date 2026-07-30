@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://lunarcrush.com/developers/api/authentication
+docs: https://lunarcrush.com/developers/api/authentication
+summary:
+  types: [http]
+  scheme: bearer
+  api_key_in: [header]
+  note: >-
+    Both LunarCrush surfaces (the v4 REST API at lunarcrush.com/api4 and the
+    AI/agent interface at lunarcrush.ai) authenticate with a single Bearer API
+    key passed in the Authorization header. There is no OAuth or per-scope
+    authorization surface; access level is governed by the account subscription
+    tier, not by token scopes.
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: >-
+    API key issued in the LunarCrush account/settings, sent as
+    `Authorization: Bearer <API_KEY>`.
+  sources:
+  - https://lunarcrush.com/developers/api/authentication
+  applies_to:
+  - api: LunarCrush API v4
+    base_url: https://lunarcrush.com/api4
+    example: 'curl -H "Authorization: Bearer <API_KEY>" https://lunarcrush.com/api4/public/topics/list/v1'
+  - api: LunarCrush.ai
+    base_url: https://lunarcrush.ai
+    example: 'curl -H "Authorization: Bearer <API_KEY>" https://lunarcrush.ai/topic/bitcoin?format=json'
+cli_auth:
+  login_browser: lunarcrush login
+  login_key: lunarcrush login --api-key <key>
+  whoami: lunarcrush whoami

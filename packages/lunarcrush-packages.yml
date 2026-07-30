@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/lunarcrush
+note: >-
+  LunarCrush ships an official first-party CLI binary (catalogued in cli/) and an
+  official stdio MCP bridge (github.com/lunarcrush/mcp-server), but does not appear
+  to publish an official server-side SDK to a package registry. The npm and PyPI
+  packages named "lunarcrush" are community/third-party client libraries — included
+  here for completeness with official:false.
+packages:
+- language: cli
+  registry: github
+  name: lunarcrush-cli
+  url: https://lunarcrush.ai/cli
+  install: 'curl -fsSL https://lunarcrush.ai/install.sh | bash'
+  official: true
+  note: Cross-platform CLI binary for the lunarcrush.ai interface.
+- language: javascript
+  registry: github
+  name: lunarcrush-mcp-server
+  url: https://github.com/lunarcrush/mcp-server
+  install: 'npx github:lunarcrush/mcp-server'
+  official: true
+  note: Official stdio bridge to the hosted lunarcrush.ai MCP server (not published to npm as of 2026-07-20).
+- language: javascript
+  registry: npm
+  name: lunarcrush
+  url: https://www.npmjs.com/package/lunarcrush
+  install: npm install lunarcrush
+  official: false
+  note: Community "Lunarcrush Open Source SDK" (maintainer mguleryuz); not published by the LunarCrush org.
+- language: python
+  registry: pypi
+  name: lunarcrush
+  url: https://pypi.org/project/lunarcrush/
+  install: pip install lunarcrush
+  official: false
+  note: Third-party client (saizk / github.com/saizk/LunarCrushAPI).

@@ -1,0 +1,14 @@
+{
+  "repo": "lunarcrush",
+  "feeds": [
+    {
+      "source": "https://lunarcrush.com/signup",
+      "feed_url": "https://lunarcrush.com/signup",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

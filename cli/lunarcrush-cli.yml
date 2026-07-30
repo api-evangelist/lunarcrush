@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: searched
+source: https://lunarcrush.ai/cli
+name: lunarcrush
+description: >-
+  First-party command-line client for the lunarcrush.ai AI/agent interface. A single
+  self-contained binary distributed per platform; wraps the same endpoints exposed
+  by lunarcrush.ai and the MCP server.
+install:
+- method: shell
+  command: 'curl -fsSL https://lunarcrush.ai/install.sh | bash'
+- method: update
+  command: lunarcrush update
+platforms:
+- lunarcrush-linux-x64
+- lunarcrush-darwin-arm64
+authentication:
+- command: lunarcrush login
+  note: Browser-based login.
+- command: lunarcrush login --api-key <key>
+  note: Store an API key locally.
+- command: lunarcrush whoami
+  note: Show account/subscription status.
+commands:
+- group: Topics & Keywords
+  items:
+  - lunarcrush topic <name>
+  - lunarcrush topic <name> time-series
+  - lunarcrush topic <name> posts
+  - lunarcrush keyword <name>
+  - lunarcrush keyword <name> time-series
+  - lunarcrush keyword <name> posts
+- group: Categories & Browsing
+  items:
+  - lunarcrush categories
+  - lunarcrush category <category>
+- group: Creators
+  items:
+  - lunarcrush creators <topic>
+  - lunarcrush creator <network> <id>
+  - lunarcrush creator <network> <id> time-series
+  - lunarcrush creator <network> <id> posts
+- group: Social Content
+  items:
+  - lunarcrush post <network> <id>
+  - lunarcrush search <query...>
+  - lunarcrush /<any/path>   # raw API endpoint passthrough
+- group: Utilities
+  items:
+  - lunarcrush update

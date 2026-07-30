@@ -1,0 +1,60 @@
+generated: '2026-07-20'
+method: searched
+source: https://lunarcrush.ai/llms.txt
+docs:
+- https://lunarcrush.com/developers/api/authentication
+- https://lunarcrush.ai/llms.txt
+authentication:
+  style: bearer-api-key
+  header: 'Authorization: Bearer <API_KEY>'
+  ref: authentication/lunarcrush-authentication.yml
+content_negotiation:
+  description: >-
+    The lunarcrush.ai interface negotiates format via a query parameter rather than
+    an Accept header. Markdown is the default representation.
+  param: format
+  values: [markdown, json, csv]
+  default: markdown
+  examples:
+  - https://lunarcrush.ai/topic/bitcoin?format=json
+  - https://lunarcrush.ai/topic/bitcoin?format=csv
+pagination:
+  style: parameterized
+  params: [sort, limit]
+  note: >-
+    List endpoints (categories, category topics, creators) accept `sort` and `limit`
+    parameters. Top-creator list endpoints also encode sort/limit positionally in the
+    path, e.g. /creators/_stocks/mentions/100.
+time_series:
+  params:
+  - interval   # 1d, 1w, 1m, 3m, 6m, 1y, all
+  - start      # YYYY-MM-DD
+  - end        # YYYY-MM-DD
+  - bucket     # hour, day
+  note: Use interval OR an explicit start/end date range.
+response_envelope:
+  json_shape: '{ "config": {...}, "data": [...] }'
+  note: >-
+    v4 REST responses wrap results in a top-level `data` array; the AI interface
+    returns a `config` block plus `data` when format=json.
+versioning:
+  scheme: uri-path
+  note: >-
+    v4 REST endpoints are namespaced under /api4/public/... and individually
+    versioned with a trailing /v1 or /v2 segment (e.g. /topics/list/v1,
+    /coins/list/v2). The lunarcrush.ai interface is unversioned/rolling.
+  ref: lifecycle/lunarcrush-lifecycle.yml
+idempotency:
+  supported: false
+  note: >-
+    The API is predominantly read-only (GET). The only mutating surface is the
+    Searches CRUD (create/update/delete custom searches); no documented
+    idempotency-key mechanism was found.
+rate_limiting:
+  signaling: subscription-tier
+  note: >-
+    Access limits are governed by the account subscription tier. The MCP `auth`
+    tool and the CLI `whoami` command report current subscription and rate-limit
+    state for the presented key.
+errors:
+  note: Standard HTTP status codes; no published RFC 9457 problem+json catalog found.

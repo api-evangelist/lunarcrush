@@ -1,0 +1,64 @@
+generated: '2026-07-20'
+method: generated
+source: https://github.com/lunarcrush/api
+note: >-
+  Entity-relationship graph generated from the documented v4 endpoint families and
+  the lunarcrush.ai route surface (no machine-readable OpenAPI is published). Keys
+  shown are the documented data keys used in URLs and output.
+entities:
+- name: Topic
+  key: topic
+  description: An aggregation of social posts mentioning a specific subject, coin, or stock.
+  metrics: [topic_rank, galaxy_score, alt_rank, interactions, posts_active, contributors_active, sentiment, social_dominance]
+- name: Category
+  key: category
+  description: A ranked collection of topics (e.g. cryptocurrencies, stocks, celebrities, gaming).
+- name: Creator
+  key: [network, id]
+  description: A social media account (X, Reddit, YouTube, TikTok, Instagram) that posts about topics.
+  metrics: [influencer_rank, followers, interactions]
+- name: Post
+  key: [network, id]
+  description: A single social post with content and engagement metrics.
+- name: Coin
+  key: coin
+  description: A cryptocurrency asset with merged social and market metrics.
+  metrics: [close, market_cap, market_dominance, volume, circulating_supply, galaxy_score, alt_rank]
+- name: Stock
+  key: stock
+  description: An equity asset with merged social and market metrics.
+- name: Nft
+  key: nft
+  description: An NFT collection with social and market metrics.
+- name: Search
+  key: id
+  description: A user-defined custom search/watchlist (the only mutable entity — CRUD via Searches endpoints).
+relationships:
+- from: Category
+  to: Topic
+  type: has_many
+  via: topics-within-category
+- from: Topic
+  to: Creator
+  type: has_many
+  via: topic-creators
+- from: Topic
+  to: Post
+  type: has_many
+  via: topic-posts
+- from: Creator
+  to: Post
+  type: has_many
+  via: creator-posts
+- from: Coin
+  to: Topic
+  type: belongs_to
+  via: topic-merge
+- from: Stock
+  to: Topic
+  type: belongs_to
+  via: topic-merge
+- from: Post
+  to: Creator
+  type: belongs_to
+  via: network+id

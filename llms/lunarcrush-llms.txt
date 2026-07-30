@@ -1,0 +1,53 @@
+# LunarCrush
+
+> LunarCrush is a real-time social intelligence platform for crypto, stocks, and trending topics. It tracks the social media conversation around 4,000+ assets across X, Reddit, YouTube, TikTok, Instagram, and News, and turns it into proprietary metrics such as Galaxy Score™ and AltRank™.
+
+## For AI agents and programmatic use
+
+If you are an AI agent, assistant, or automated tool that wants to *query* LunarCrush data (topics, categories, creators, time series, metrics), use the AI-friendly interface at https://lunarcrush.ai — it exposes the same data as clean, machine-readable endpoints (JSON/CSV), plus MCP and CLI access, and its own llms.txt describing every route: https://lunarcrush.ai/llms.txt
+
+The pages below on lunarcrush.com are the human-facing marketing and reference site — use them to understand and summarize what LunarCrush is and offers.
+
+## About
+
+LunarCrush aggregates public posts from X (Twitter), Reddit, YouTube, TikTok, Instagram, and News into topics and categories, then scores them in real time. Every post is run through topic classification, spam/bot filtering, sentiment scoring, and creator weighting before it reaches a metric, so the numbers reflect cleaned, engagement-weighted activity rather than raw mention counts. Proprietary metrics include Galaxy Score™ (a 0–100 composite of social and market health) and AltRank™ (relative momentum across the market).
+
+## Key pages
+
+- [Homepage](https://lunarcrush.com): Overview of the platform, live trending assets, and product entry points.
+- [Pricing](https://lunarcrush.com/pricing): Subscription plans and API access tiers.
+- [Use cases](https://lunarcrush.com/use-cases): How traders, analysts, funds, and builders use LunarCrush.
+- [Enterprise](https://lunarcrush.com/enterprise): Data licensing and enterprise offerings.
+- [Blog](https://lunarcrush.com/blog): Research, product updates, and market commentary.
+- [Support](https://lunarcrush.com/support): Help center and frequently asked questions.
+- [About](https://lunarcrush.com/about): Company background and mission.
+
+## Products
+
+- [LunarCrush API](https://lunarcrush.com/products/lunarcrush-api): REST API for social and market metrics across crypto, stocks, and topics.
+- [MCP Server](https://lunarcrush.com/products/lunarcrush-mcpserver): Model Context Protocol server for connecting LunarCrush data to AI agents.
+- [Claude integration](https://lunarcrush.com/products/lunarcrush-claude): Use LunarCrush data directly inside Claude.
+- [Discover](https://lunarcrush.com/products/lunarcrush-discover): Explore trending crypto, stocks, and topics by social signal.
+- [Custom Collections](https://lunarcrush.com/products/lunarcrush-custom-collections): Build and track your own watchlists of assets and topics.
+
+## Metrics glossary
+
+Definitions, calculation, and interpretation for every LunarCrush metric:
+
+- [Galaxy Score™](https://lunarcrush.com/metrics/galaxy-score): A 0–100 composite combining social activity, sentiment, and market momentum into one real-time health score. Above 50 is above-average.
+- [AltRank™](https://lunarcrush.com/metrics/altrank): Ranks an asset's combined social and price performance relative to the rest of the market; lower is stronger.
+- [Social Volume](https://lunarcrush.com/metrics/social-volume): The number of public posts mentioning an asset over a period.
+- [Social Dominance](https://lunarcrush.com/metrics/social-dominance): An asset's share of the total conversation within its category.
+- [Sentiment](https://lunarcrush.com/metrics/sentiment): The engagement-weighted emotional tone (bullish vs bearish) of the conversation.
+- [Social Mentions](https://lunarcrush.com/metrics/social-mentions): The raw count of posts mentioning an asset.
+- [Social Engagement](https://lunarcrush.com/metrics/social-engagement): Total interactions (likes, replies, reposts, views) on posts about an asset.
+- [Social Contributors](https://lunarcrush.com/metrics/social-contributors): The number of distinct accounts posting about an asset.
+- [Market Dominance](https://lunarcrush.com/metrics/market-dominance): An asset's share of total market capitalization within its category.
+
+## Data sources
+
+X (Twitter), Reddit, YouTube, TikTok, Instagram, and News — billions of public data points filtered, classified, and scored daily.
+
+## Optional
+
+- [llms-full.txt](https://lunarcrush.com/llms-full.txt): Longer version with direct-answer explanations of the core metrics and common questions.

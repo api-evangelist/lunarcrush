@@ -1,0 +1,56 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://lunarcrush.com/products/lunarcrush-mcpserver
+server:
+  name: LunarCrush MCP
+  version: 0.1.1
+  transport: http
+  url: https://lunarcrush.ai/mcp
+  sse_url: https://lunarcrush.ai/sse
+  auth:
+    type: bearer
+    note: >-
+      Pass the LunarCrush API key as a Bearer token. The `auth` tool returns the
+      current subscription and rate-limit state for the presented key.
+  verified: >-
+    Live JSON-RPC handshake succeeded 2026-07-20 (initialize returned
+    serverInfo name "LunarCrush MCP" version 0.1.1); tools/list enumerated below.
+stdio_bridge:
+  repo: https://github.com/lunarcrush/mcp-server
+  package_name: lunarcrush-mcp-server
+  description: >-
+    Official stdio interface to the hosted lunarcrush.ai remote MCP server, for
+    clients that require stdio transport (e.g. some desktop AI assistants).
+  official: true
+tools:
+- name: list
+  description: List of social topics within a category sorted and filtered by available metrics and sectors.
+- name: topic
+  description: Summary snapshot of all social metrics and insights for any social topic, keyword, cryptocurrency, or stock.
+- name: topic_time_series
+  description: Historical time-series metrics for a social topic, keyword, cryptocurrency, stock, or custom search.
+- name: topic_posts
+  description: Top social posts by interactions for a given time period for a topic.
+- name: keyword_time_series
+  description: Historical time-series social metrics for any keyword or phrase (exact keyword/phrase analytics).
+- name: keyword_posts
+  description: Top social posts by interactions for a given time period for a keyword.
+- name: creator
+  description: Creator summary snapshot of social metrics and insights for a social media account.
+- name: creator_posts
+  description: Top social posts for a specific social media account by unique id or screen name and time period.
+- name: creator_time_series
+  description: Historical time-series metrics for a social media account by unique id or screen name.
+- name: post
+  description: Social post details; post ids can be inferred from the public URL link to the post.
+- name: cryptocurrencies
+  description: List of cryptocurrencies sorted by available metrics and filtered by a sector.
+- name: stocks
+  description: List of stocks sorted by available metrics and filtered by a sector.
+- name: search
+  description: Search for any keyword or account; returns matching topics, creator accounts, and top social posts.
+- name: fetch
+  description: Fetch a lunarcrush.ai context using a specific path like /topic/bitcoin or /topic/bitcoin/posts.
+- name: auth
+  description: Get subscription and rate-limit information; optionally provide an API key to test.
