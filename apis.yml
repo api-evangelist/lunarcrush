@@ -1,25 +1,142 @@
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1
 aid: lunarcrush
 name: LunarCrush
-description: LunarCrush is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  LunarCrush is a real-time social intelligence platform for crypto, stocks, and
+  trending topics. It aggregates billions of public posts from X (Twitter), Reddit,
+  YouTube, TikTok, Instagram, and News across 4,000+ assets, runs them through topic
+  classification, spam/bot filtering, sentiment scoring, and creator weighting, and
+  turns them into proprietary metrics such as Galaxy Score, AltRank, TopicRank,
+  CreatorRank, Social Dominance, and Sentiment. LunarCrush exposes this data through
+  two developer surfaces: the LunarCrush API v4 (a REST API at lunarcrush.com/api4 for
+  topics, categories, creators, posts, coins, stocks, and NFTs) and lunarcrush.ai (an
+  AI/agent-native interface returning markdown/JSON/CSV, with a hosted Model Context
+  Protocol server and a first-party CLI). Both use Bearer-token API-key authentication.
 url: https://raw.githubusercontent.com/api-evangelist/lunarcrush/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://lunarcrush.com/apple-touch-icon.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - techstars
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Social Intelligence
+- Cryptocurrency
+- Stocks
+- Sentiment Analysis
+- Social Media
+- Market Data
+- Analytics
+- AI Agents
+- MCP
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: LunarCrush API v4
+  description: >-
+    REST API for LunarCrush social and market intelligence. Endpoints cover trending
+    topics, categories, creators, posts, coins, stocks, and NFTs, including summary
+    snapshots, historical time series, top posts, news, and AI "what's up" summaries.
+    Authenticated with a Bearer API key.
+  humanURL: https://lunarcrush.com/developers/api/endpoints
+  baseURL: https://lunarcrush.com/api4
+  tags:
+  - Social Intelligence
+  - Cryptocurrency
+  - Stocks
+  - Market Data
+  properties:
+  - type: Documentation
+    url: https://lunarcrush.com/developers/api/endpoints
+  - type: APIReference
+    url: https://github.com/lunarcrush/api
+  - type: Authentication
+    url: authentication/lunarcrush-authentication.yml
+- name: LunarCrush.ai
+  description: >-
+    AI/agent-native interface to LunarCrush data at lunarcrush.ai. Exposes topics,
+    categories, creators, posts, and search as clean machine-readable endpoints
+    returning markdown by default (JSON with ?format=json, CSV with ?format=csv),
+    plus a hosted MCP server and a first-party CLI. Bearer API-key auth.
+  humanURL: https://lunarcrush.ai
+  baseURL: https://lunarcrush.ai
+  tags:
+  - AI Agents
+  - MCP
+  - Social Intelligence
+  properties:
+  - type: Documentation
+    url: https://lunarcrush.ai/llms.txt
+  - type: MCPServer
+    url: mcp/lunarcrush-mcp.yml
+  - type: CLI
+    url: cli/lunarcrush-cli.yml
 common:
 - type: Website
   url: https://lunarcrush.com/
+- type: DeveloperPortal
+  url: https://lunarcrush.com/developers/api
+- type: Documentation
+  url: https://lunarcrush.com/developers/api/endpoints
+- type: APIReference
+  url: https://github.com/lunarcrush/api
+- type: Authentication
+  url: authentication/lunarcrush-authentication.yml
+- type: MCPServer
+  url: mcp/lunarcrush-mcp.yml
+- type: CLI
+  url: cli/lunarcrush-cli.yml
+- type: Packages
+  url: packages/lunarcrush-packages.yml
+- type: Conventions
+  url: conventions/lunarcrush-conventions.yml
+- type: Lifecycle
+  url: lifecycle/lunarcrush-lifecycle.yml
+- type: Conformance
+  url: conformance/lunarcrush-conformance.yml
+- type: DataModel
+  url: data-model/lunarcrush-data-model.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/lunarcrush-llms.txt
+- type: DomainSecurity
+  url: security/lunarcrush-domain-security.yml
+- type: GitHubOrganization
+  url: https://github.com/lunarcrush
+- type: Pricing
+  url: https://lunarcrush.com/pricing
+- type: SignUp
+  url: https://lunarcrush.com/signup
+- type: Blog
+  url: https://lunarcrush.com/blog
+- type: Support
+  url: https://lunarcrush.com/support
+- type: TermsOfService
+  url: https://lunarcrush.com/terms
+- type: PrivacyPolicy
+  url: https://lunarcrush.com/privacy
