@@ -64,6 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-LunarCrush is a company surfaced as a portfolio company of techstars and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+LunarCrush is a real-time social intelligence platform for crypto, stocks, and trending topics. It aggregates billions of public posts from X (Twitter), Reddit, YouTube, TikTok, Instagram, and News across 4,000+ assets, runs them through topic classification, spam/bot filtering, sentiment scoring, and creator weighting, and turns them into proprietary metrics such as Galaxy Score, AltRank, TopicRank, CreatorRank, Social Dominance, and Sentiment. LunarCrush exposes this data through two developer surfaces: the LunarCrush API v4 (a REST API at lunarcrush.com/api4 for topics, categories, creators, posts, coins, stocks, and NFTs) and lunarcrush.ai (an AI/agent-native interface returning markdown/JSON/CSV, with a hosted Model Context Protocol server and a first-party CLI). Both use Bearer-token API-key authentication.
 
-Backed by: techstars — https://lunarcrush.com/
+**Areas:** Company · Social Intelligence · Cryptocurrency · Stocks · Sentiment Analysis · Social Media · Market Data · Analytics · AI Agents · MCP
+
+## LunarCrush on APIs.io
+
+Everything profiled for LunarCrush is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lunarcrush/](https://apis.io/providers/lunarcrush/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [LunarCrush API v4](https://apis.io/apis/lunarcrush/lunarcrush-api-v4/) — REST API for LunarCrush social and market intelligence. Endpoints cover trending topics, categories, creators, posts, coins, stocks, and NFTs, including…
+- [LunarCrush.ai](https://apis.io/apis/lunarcrush/lunarcrushai/) — AI/agent-native interface to LunarCrush data at lunarcrush.ai. Exposes topics, categories, creators, posts, and search as clean machine-readable endpoints…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [LunarCrush MCP](https://apis.io/servers/lunarcrush/lunarcrush-mcp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lunarcrush Authentication](https://apis.io/security/lunarcrush/lunarcrush-authentication/)
+- [Lunarcrush Domain Security](https://apis.io/security/lunarcrush/lunarcrush-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://lunarcrush.com/)
+- [Documentation](https://lunarcrush.com/developers/api/endpoints)
+- [API reference](https://github.com/lunarcrush/api)
+- [Pricing](https://lunarcrush.com/pricing)
+- [Sign up](https://lunarcrush.com/signup)
+- [Support](https://lunarcrush.com/support)
+- [Blog](https://lunarcrush.com/blog)
+- [Terms of service](https://lunarcrush.com/terms)
+- [Privacy policy](https://lunarcrush.com/privacy)
+- [GitHub](https://github.com/lunarcrush)
+
+## API Evangelist rating
+
+**Kin Score 28.5** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 54.2 |
+| Access clarity | 44.7 |
+
+**Agent readiness 12.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 23.1** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lunarcrush/](https://apis.io/providers/lunarcrush/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for LunarCrush: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lunarcrush/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
